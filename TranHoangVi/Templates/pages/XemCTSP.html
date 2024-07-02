@@ -1,0 +1,37 @@
+{% extends "page/layout.html" %}
+{% block title %}
+    Sản phẩm
+{% endblock %}
+{% block content %}
+
+    {%if 1SanPham%}
+    <div class="container">
+        <div class="info-product" style="width: 90%; margin: 10px">
+            <div class="row">
+                <div class="col-7">
+                    <img src="/static/img/{{1SanPham.hinhanh}}" width=400 style="margin: 5px 5px 5px 30px" alt="sad">
+                </div>
+                <div class="col-5" style="margin-top: 20px;">
+                        <h4>{{1SanPham.tenSP}}</h4>
+                        <p>Phần gà gồm: </p>
+                        <p style="font-style: italic;">{{1SanPham.donGia}} VNĐ</p>
+                        <hr>
+                        <p>gà giòn không cay</p>
+                        <p>Gà giòn cay</p>
+                        <p>Cocacola</p>
+                        <p>Fanta</p>
+                        <hr>
+                            <input type="number" id="quantity" name="soluong" min="1" max="100">
+                            <a href="{%url 'themgiohang' msp=1SanPham.id%}">
+                                <button style="background:rgb(255, 130, 0); border: none;" class="btn btn-success">
+                                    Thêm vào giỏ hàng
+                                </button>
+                            </a>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endif%}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "page/layout.html" %}
+{% block title %}
+    Xem sản phẩm
+{% endblock %}
+{% block content %}
+    <h2>
+        {%if DanhMuc%}
+            {{DanhMuc.tenDM}}
+        {%endif%}
+    </h2>
+  <div class="row" style="margin-left:0">
+    {%for sp in SanPham%}
+    <div class="col" style="margin-bottom: 20px">
+        <a class="active-sp" href="{% url 'xemchitietsp' masp=sp.id%}">
+            <div class="card" style="width: 13rem;">
+                <img src="/static/img/{{sp.hinhanh}}" class="card-img-top" width=70>
+                <div class="card-body">
+                  <p style="text-align:center;font-weight:bold; color: orange;">Gà Hong Kong Char Siu không xương</p> 
+                  <p style="text-align:center;font-weight:bold;">64000 đ</p>
+                </div>
+              </div>
+        </a>
+    </div>
+    {%endfor%}
+  </div>
+{% endblock %}

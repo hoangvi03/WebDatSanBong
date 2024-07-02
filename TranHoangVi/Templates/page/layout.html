@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style1.css' %}" type="text/css">
+    <title>{% block title %}{% endblock  %}</title>
+</head>
+<body>
+    <div class="container">
+        
+        <nav class="navbar" style="">
+            <div class="container">
+                  <div>
+                    <a class="navbar-brand" href="#">
+                        <img src="/static/img/logo.png" alt="Logo" width="100">
+                      </a>
+                      <a class="navbar-brand" href="#">
+                        Khuyến mãi
+                      </a>
+                      <a class="navbar-brand" href="">
+                        Thực đơn
+                      </a>
+                      <a class="navbar-brand" href="#">
+                        Cửa hàng
+                      </a>
+                      <a class="navbar-brand" href="#">
+                        Theo dỗi đơn hàng
+                      </a>
+                      <a class="navbar-brand" href="#">
+                        Đặt tiệc
+                      </a>
+                  </div>
+                  <div class="shopping-cart">
+                    <a href="{%url 'xemgiohang' %}">
+                        <img src="/static/img/basket.svg" alt="cart" width=30>
+                    </a>
+                  </div>
+            </div>
+        </nav>
+    
+        <div class="content">
+            {%block content%}
+    
+            {% endblock content %}
+        </div>
+
+        <div class="footer">
+            <div class="container text-center">
+                <div class="row">
+                  <div class="col-sm-3">
+                    Hotline đặt hàng nhanh chóng
+                    <h1>19006008</h1>
+                  </div>
+                  <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col align-self-start">
+                            <br>
+                            <a href="#" >Về chúng tôi</a>
+                          </div>
+                          <div class="col align-self-center">
+                            <br>
+                            <a href="#" >Tuyển dụng</a>
+                          </div>
+                    </div>
+                  
+                </div>
+              </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends "page/layout.html" %}
+{% block title %}
+    Thêm danh mục
+{% endblock %}
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Danh mục</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for dm in DanhMuc%}
+                <tr>
+                    <td>{{dm.tenDM}}</td>
+                    <td><a href="{% url 'xemsptheoloai' madm=dm.id %}">Xem sản phẩm</a></td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <div class="add-category">
+        <h2>THÊM DANH MỤC MỚI</h2>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <label for="category-name">Tên danh mục</label>
+            <input type="text" id="category-name" name="tenDM" required>
+            <button type="submit">Thêm</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "page/layout.html" %}
+{% block title %}
+    Xem giỏ hàng
+{% endblock %}
+{% block content %}
+
+<table class="table w-75">
+    <thead class="thead-dark bg-secondary">
+        <tr>
+            <td>Mã sản phẩm</td>
+            <td> Tên</td>
+            <td>Đơn giá</td>
+            <td>Số lượng</td>
+        </tr>
+    </thead>
+    {%for item_id, item in Gio.items%}
+    <tr class="border">
+        <td>
+            {{item_id}}
+        </td>
+        <td>
+            {{item.name}}
+        </td>
+        <td>
+            {{item.gia}}
+        </td>
+        <td>
+            {{item.soluong}}
+        </td>
+    </tr>
+    {%endfor%}
+</table>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+.navbar
+{
+    color: white;
+    background:rgb(255, 130, 0);
+}
+.navbar a
+{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+.navbar .shopping-cart a img
+{
+    filter: invert(100%);
+}
+
+.content
+{
+    width: 1000px;
+    padding: 20px;
+}
+.active-sp
+{
+    text-decoration: none;
+}
+table {
+    width: 40%;
+    border-collapse: collapse;
+    margin:auto;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: yellow;
+}
+.add-category {
+    background-color: #f9f0d0;
+    padding: 20px;
+    border: 1px solid black;
+    width: 40%;
+    margin:auto;
+    box-sizing: border-box;
+}
+.add-category h2 {
+    color: red;
+}
+.add-category input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 5px;
+    margin-right: 10px;
+}
+.add-category button {
+    padding: 5px 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.add-category button:hover {
+    background-color: darkblue;
+    
+}
+
+
+.footer
+{    padding: 20px;
+    color: white;
+    background:rgb(255, 130, 0);
+}
+.footer a
+{
+
+    text-decoration: none;
+    color: white;
+    padding-top: 20px;
+}
